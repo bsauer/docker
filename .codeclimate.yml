@@ -1,0 +1,10 @@
+engines:
+  fixme:
+    enabled: true
+  shellcheck:
+    enabled: true
+    exclude_fingerprints:
+
+ratings:
+  paths:
+    - "**.sh"
