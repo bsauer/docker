@@ -1,4 +1,4 @@
-FROM docker:1.12
+FROM docker:latest
 
 RUN buildDeps='build-base gcc openssl-dev libffi-dev python-dev' \
     set -x \
