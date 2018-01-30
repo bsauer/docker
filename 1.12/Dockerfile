@@ -7,7 +7,7 @@ RUN buildDeps='build-base gcc openssl-dev libffi-dev python-dev' \
         bash bash-doc bash-completion \
         coreutils findutils grep tree \
     && rm -rf /var/cache/apk/* \
-    && pip install docker-compose ansible \
+    && pip install -U docker-compose ansible \
     && apk del --no-cache $buildDeps \
     && docker-compose --version \
     && ansible --version
