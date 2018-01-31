@@ -9,7 +9,6 @@ RUN buildDeps='build-base gcc openssl-dev libffi-dev python-dev' \
     && rm -rf /var/cache/apk/* \
     && pip install -U docker-compose ansible \
     && apk del --no-cache $buildDeps \
-    && docker info \
     && docker-compose --version \
     && ansible --version
 
