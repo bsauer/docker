@@ -5,10 +5,11 @@ RUN buildDeps='build-base gcc openssl-dev libffi-dev python-dev' \
     && apk --no-cache update \
     && apk add --no-cache $buildDeps git openssh-client libffi py-pip \
         bash bash-doc bash-completion \
-        coreutils findutils grep tree \
+        coreutils findutils grep tree curl \
     && rm -rf /var/cache/apk/* \
     && pip install -U docker-compose ansible \
     && apk del --no-cache $buildDeps \
+    && docker info \
     && docker-compose --version \
     && ansible --version
 
